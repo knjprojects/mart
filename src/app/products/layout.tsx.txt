@@ -1,0 +1,25 @@
+import type { Metadata } from "next";
+//import { Inter } from "next/font/google";
+//import "./globals.css";
+//import "slick-carousel/slick/slick.css";
+//import "slick-carousel/slick/slick-theme.css";
+//import { ThemeProvider } from 'next-themes'
+//const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Sudesh Garments Products Page",
+  description: "All the products you love and need, at great prices and delivered with speed",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+
+      {children}
+      
+    
+  );
+}

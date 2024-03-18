@@ -6,7 +6,15 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  /* Your default theme */
+  /*--background: white;*/
+  /*--foreground: black;*/
 }
+/*[data-theme='dark'] {
+  --background: black;
+  --foreground: white;
+}*/
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -29,5 +37,22 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+@layer components{
+  .text{
+    @apply dark:text-white text-black
+  }
+  .resize{
+    @apply sm:p-12 md:p-14 lg:p-16 xl:p-24
+  }
+  .darken{
+    @apply bg-gray-900 border-2 border-gray-600
+  }
+  .lighten{
+    @apply bg-gray-100
+  }
+  .chip {
+    @apply dark:darken hover:scale-x-105 lighten
   }
 }

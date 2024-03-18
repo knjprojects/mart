@@ -13,7 +13,17 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        wave: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.2)' },
+        },
+      },
+      animation: {
+        'wave_5s_ease-in-out_2': 'wave 5s ease-in-out 2',
+      },
     },
+    
   },
   plugins: [],
 };
