@@ -15,9 +15,9 @@ import { createClient, groq } from "next-sanity";
 import { Post } from "../../../typings";
 //import {apiVersion, dataset, projectId} from './env'
 const config={
-  projectId: 'tqpo72wd', //process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,//projectId,
-  dataset: 'production', //process.env.NEXT_PUBLIC_SANITY_DATASET,//'production',
-  apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2023-05-03',//'2023-06-19',
+  projectId: process.env.SANITY_PROJECT_ID,//projectId,
+  dataset: process.env.SANITY_DATASET,//'production',
+  apiVersion: process.env.SANITY_API_VERSION || '2023-05-03',//'2023-06-19',
   useCdn: false,
   
 }

@@ -5,8 +5,13 @@ import Image from "next/image";
 import Homey from '../components/Homey'
 import logo from "../assets/brand/br-1.png"
 import { useTheme } from 'next-themes' //
-export default function Home() {
-  
+import { redirect } from 'next/navigation';
+import { authConfig } from '@/utils/lib/auth';
+import { getServerSession } from "next-auth";
+export default async function Home() {
+  const session = await getServerSession(authConfig);
+  if (session) return redirect("/admin");
+  else redirect('/')
   useEffect(()=>{
     
   },[])

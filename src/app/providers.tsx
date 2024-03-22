@@ -1,6 +1,8 @@
 "use client"
 import React from 'react'
 import { Geiger } from 'react-geiger'
+import { SessionProvider } from "next-auth/react";
+
 type Props = {}
 import { ThemeProvider } from 'next-themes'
 const Providers = ({children}:any) => {
@@ -11,7 +13,8 @@ const Providers = ({children}:any) => {
         <ThemeProvider  disableTransitionOnChange
           attribute="class"
           value={{ light: "light", dark: "dark" }}
-          defaultTheme="system">{children}</ThemeProvider>
+          defaultTheme="system">
+            <SessionProvider>{children}</SessionProvider></ThemeProvider>
           </Geiger>
   )
 }
